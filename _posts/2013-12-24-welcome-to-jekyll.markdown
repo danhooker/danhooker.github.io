@@ -1,8 +1,10 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
-date:   2013-12-24 13:36:17
-categories: jekyll update
+subheading: "Welcome to hell... just kidding"
+date:   2013-12-24
+author: Daniel Hooker
+tags: jekyll update
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!

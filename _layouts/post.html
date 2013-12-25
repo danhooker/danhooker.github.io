@@ -1,9 +1,15 @@
 {% include header.html %}
 
-	<h1>{{ page.title }}</h1>
-	<h2 class="subheading">{{ page.subheading }}</h2>
-	<div id="content">
-		{{content}}
-	</div>
+<div id="content" class="two-thirds column">
+	<h2>{{ page.title }}</h2>
+	<h3 class="subheading">{{ page.subheading }}</h3>
+	<p class="post-meta"><span class="post-date">{{ page.date | date_to_string }}</span> &mdash; <span class="author">{{ page.author }}</span></p>
+	
+	{{ content }}
+	
+	<p class="tags">Tags: {{ page.tags | array_to_sentence_string }}</p>
+	<p class="words">Words: {{ page.content | number_of_words }}</p>
+</div>
 
+{% include sidebar.html %}
 {% include footer.html %}
