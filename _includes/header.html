@@ -1,36 +1,44 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-<head>
-
-	<!-- Basic Page Needs
-  ================================================== -->
-	<meta charset="utf-8">
-	<title>{{ page.title }}</title>
-	<meta name="description" content="A website">
-	<meta name="author" content="Daniel Hooker">
-
-	<!-- Mobile Specific Metas
-  ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<!-- CSS
-  ================================================== -->
-  <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300,500,500italic|Roboto' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="{{ site.baseurl }}css/base.css">
-	<link rel="stylesheet" href="{{ site.baseurl }}css/skeleton.css">
-	<link rel="stylesheet" href="{{ site.baseurl }}css/layout.css">
-	<link rel="stylesheet" href="{{ site.baseurl }}css/syntax.css">
-
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
-</head>
-<body>
-<div class="container">
-	<div id="header" class="sixteen columns">
-		<h1><a href="/">Daniel Hooker</a></h1>
+<header class="site-header">
+	<div class="branding">
+		{% if site.theme_settings.gravatar %}
+		<a href="{{ site.baseurl }}/">
+			<img class="avatar" src="https://secure.gravatar.com/avatar/{{ site.theme_settings.gravatar }}?s=100" alt=""/>
+		</a>
+		{% elsif site.theme_settings.avatar %}
+		<a href="{{ site.baseurl }}/">
+			<img class="avatar" src="{{ site.baseurl }}/{{ site.theme_settings.avatar }}" alt=""/>
+		</a>
+		{% endif %}
+		<h1 class="site-title">
+			<a href="{{ site.baseurl }}/">{{ site.theme_settings.title }}</a>
+		</h1>
 	</div>
+	<nav class="site-nav">
+		<ul>
+			{% for page in site.pages %}
+			{% if page.title and page.hide != true %}
+			<li>
+				<a class="page-link" href="{{ page.url | relative_url }}">
+					{{ page.title }}
+				</a>
+			</li>
+			{% endif %}
+			{% endfor %}
+			<!-- Social icons from Font Awesome, if enabled  -->
+			{% include icons.html %}
+            
+            <!-- Search bar -->
+            {% if site.theme_settings.search %}
+            <li>
+            <form action="{{ site.baseurl }}/search.html" method="get">
+                <input type="text" id="search-box" name="query" placeholder="Search" class="">
+                <button type="submit" class="">
+                    <i class="fa fa-fw fa-search"></i>
+                </button>
+            </form>
+            </li>
+            {% endif %}
+		</ul>
+	</nav>
+    
+</header>

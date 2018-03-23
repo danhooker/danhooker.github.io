@@ -1,23 +1,10 @@
-{% include header.html %}
-
-<div id="content" class="sixteen columns">
-	<h2>{{ page.title }}</h2>
-	<h3 class="subheading">{{ page.subheading }}</h3>
-	{{ content }}
-</div>
-
-<div id="sub-content" class="sixteen columns">
-	<div class="one-third column alpha">
-		{% include recent-posts.html %}
-	</div>
-	
-	<div class="one-third column">
-		{% include recent-posts.html %}
-	</div>
-
-	<div class="one-third column omega">
-		{% include pages.html %}	
-	</div>
-</div>
-
-{% include footer.html %}
+---
+layout: default
+---
+<article {% if page.feature-img %}class="feature-image"{% endif %}>
+  <header style="background-image: url('{{ site.baseurl }}/{{ page.feature-img }}')">
+    <h1 class="title">{{ page.title }}</h1>
+    {% if page.subtitle %}<h2 class="subtitle">{{ page.subtitle }}</h2>{% endif %}
+  </header>
+  <section class="post-content">{{ content }}</section>
+</article>
