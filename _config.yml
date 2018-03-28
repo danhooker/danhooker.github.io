@@ -20,23 +20,23 @@ theme_settings:
    Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>. Icon by <a href="https://thenounproject.com/sean.maldjian/" alt="Sean Maldjian on The Noun Project">Sean Maldjian</a>
 
   # Icons
-  rss: false
+  linkedin: "https://www.linkedin.com/in/danielhooker/"
+  github: "danhooker"
   email_address: "hooker001@gmail.com"
+  rss: true
   behance:
   bitbucket:
   dribbble:
   facebook:
   flickr:
   gitlab:
-  github: "danhooker"
   google_plus:
   instagram:
-  linkedin: "https://www.linkedin.com/in/danielhooker/"
   pinterest:
   reddit:
   soundcloud:
   stack_exchange:  # Full URL
-  steam: 
+  steam:
   tumblr:
   wordpress:
   youtube:
