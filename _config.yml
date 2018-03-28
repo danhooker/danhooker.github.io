@@ -6,7 +6,7 @@ url: "http://danielhooker.com"
 theme_settings:
   # Meta
   title: Daniel Hooker
-  avatar: assets/img/avatar.png
+  avatar: assets/img/avatar2.png
   favicon: assets/favicon.ico
   gravatar: # Email MD5 hash
   description: "taxonomy, data visualization and analysis" # used by search engines
@@ -36,7 +36,7 @@ theme_settings:
   reddit:
   soundcloud:
   stack_exchange:  # Full URL
-  steam:
+  steam: adding
   tumblr:
   wordpress:
   youtube:
